@@ -1,27 +1,20 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/led/led.h>
-#include "hpd.dtsi"
+#include "offsetkey.dtsi"
 #include "trackball.dtsi"
 #define SYMBOLS 2
 #include "rgb.dtsi"
-#include "split_input_common.dtsi"
-
-&default_transform {
-	col-offset = <6>;
-};
 
 / {
 	chosen {
-        zmk,kscan = &kscan0;
         zmk,underglow = &led_strip;
     };
 
-    &kscan0 {
-        compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row";
+    kscan1: kscan {
         wakeup-source;
-
+        diode-direction = "col2row";
+        compatible = "zmk,kscan-gpio-matrix";
         row-gpios
             = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio0 23 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -39,6 +32,24 @@
             , <&gpio0 9  GPIO_ACTIVE_HIGH>
             ;
     };
+
+//only 1.04 1.07 remain
+    kscan0: kscan_composite {
+        compatible = "zmk,kscan-composite";
+         wakeup-source;
+        rows = <6>;
+        columns = <6>;
+
+        // Include the matrix driver
+        matrix {
+            kscan = <&kscan1>;
+        };
+
+    };
+};
+
+&default_transform {
+	col-offset = <6>;
 };
 
 &pinctrl {
@@ -67,6 +78,8 @@
       layers = <SYMBOLS>;
       input-processors = <&zip_xy_transform ( INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)>, <&zip_xy_scaler 1 10>, <&zip_xy_to_scroll_mapper>;
     };
+  };
+}; 
   };
 }; 
 
