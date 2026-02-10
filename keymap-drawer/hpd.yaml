@@ -49,18 +49,18 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
+  - '&mkp MB2'
+  - {t: '`', h: '1', s: '~'}
   - {t: '-', h: '$$mdi:apple-keyboard-control$$', s: _}
   - {t: '=', h: LGUI, s: +}
   - $$mdi:apple-keyboard-option$$
   - '&mkp MB1'
-  - '&mkp MB2'
-  - {t: '`', h: '1', s: '~'}
-  - $$mdi:keyboard-esc$$
-  - {t: '$$mdi:backspace-reverse-outline$$', h: '2'}
-  - {t: ., h: '1'}
+  - {t: '''', h: '1', s: '"'}
   - $$mdi:keyboard-space$$
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
+  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:backspace-reverse-outline$$', h: '2'}
   - '&mkp MB3'
   '1':
   - {t: '`', s: '~'}
@@ -112,6 +112,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -119,7 +120,6 @@ layers:
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -173,6 +173,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - RGB ON
   - RGB OFF
   - {t: '$$mdi:transfer$$', type: trans}
@@ -180,9 +182,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
