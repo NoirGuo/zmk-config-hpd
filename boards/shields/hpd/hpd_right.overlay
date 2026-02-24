@@ -1,5 +1,4 @@
 #include "hpd.dtsi"
-#include "split_input_common.dtsi"
 #include <dt-bindings/led/led.h>
 
 &default_transform {
