@@ -1,11 +1,8 @@
 include:
-  - board: nice_nano_v2
-    shield: hpd_right
+  - board: nice_nano
+    shield: keyball61_left
+  - board: nice_nano
+    shield: keyball61_right
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
-    artifact-name: hpd_right 
-  - board: nice_nano_v2
-    shield: hpd_left
-    artifact-name: hpd_left
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: settings_reset
